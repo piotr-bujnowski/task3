@@ -35,7 +35,7 @@ public class Student {
     private Address address;
 
     @PrePersist
-    private void prePersist() {
+    public void prePersist() {
         this.id = UUID.randomUUID().toString();
         this.createdAt = LocalDateTime.now();
         logger.info("Created user {}", this);
